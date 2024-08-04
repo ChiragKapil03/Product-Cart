@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Tilt+Neon&display=swap');
+</style>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Lato", sans-serif;
+    }
+
+    .main{
+        display: flex;
+
+    }
+
+    .search{
+        width: 90%;
+        height: 50px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-radius: 15px;
+        border: 1px solid gray;
+        
+    }
+    #products{
+        height: 100vh;
+        width: 70%;
+        background-color: rgba(97, 229, 244, 0.082);
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction:column;
+        gap: 8px;
+        padding: 20px;
+    }
+
+    .prod{
+        height: 180px;
+        width: 90%;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px gray;
+        display: flex;
+        align-items: center;
+        padding: 4px;
+        gap: 20px;
+    }
+
+    .thumbnail{
+        height: 95%;
+        width: 25%;
+        border: 1px solid rgba(107, 107, 107, 0.058);
+    }
+
+    #details{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        /* word-wrap: normal; */
+    }
+
+    #offer{
+        display: flex;
+        padding-left:15px;
+        height: 20px;
+        width: 120px;
+        background-color: red;
+        color: white; 
+        font-weight: 800;
+        border-radius: 2px;  
+    }
+
+    #button{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 10px;
+        background-color: #ffd81487;
+        padding: 4px;
+        width: 80px;
+        height: 30px;
+        border-radius: 20px;
+    }
+
+    .minus{
+        width: 20px;
+        height: 30px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border: 0;
+        background-color: #fed401;box-shadow: -5px 0 0 #fed401;
+    }
+    .minus:hover{
+        cursor: pointer;
+    }
+
+    .add{
+        width: 20px;
+        height: 30px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border: 0;
+        background-color: #fed401;
+        box-shadow: 5px 0 0 #fed401;
+    }
+    .add:hover{
+        cursor: pointer;
+    }
+
+    #cart{
+        height: 100vh;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+    }
+
+    .top{
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        height: 8vh;
+        width: 100%;
+        background-color: rgb(228, 228, 228);
+    }
+
+    .top img{
+        height: 30px;
+        width: 30px;
+    }
+
+    .dynamicWindow{
+        height: 80vh;
+        width: 100%;
+        background-color: rgba(128, 128, 128, 0.063);
+        border: 1px solid black;
+        border-left: 0;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+</style>
+<body>
+    <div class="main">
+        <div id="products">
+            <div class="search">Earphones</div>
+            <p>3 result match your search</p> <br>
+            <div class="prod" id="prod1">
+                <img class="thumbnail" id="thumbnail1" src="https://m.media-amazon.com/images/I/81hft+H1HHL._AC_UY327_FMwebp_QL65_.jpg" alt="">
+                <div id="details">
+                    <h3>Boult C100SI Wired In Ear Headphones with Mic, Pure Bass Sound, One Button Multi-function Remote, Premium Metallic Finish, Angled Buds for Comfort fit (Black)</h3>
+                    <p style="font-size: 14px; ">5K+ bought in past month</p>
+                    <div id="offer">Limited Time Deal</div>
+                    <p>₹ <span id="Cost1">500</span></p>
+                    <div id="button">
+                        <button id="minus1" class="minus"><b>-</b></button>
+                        <p id="itemNumber1" >0</p>
+                        <button id="add1" class="add"><b>+</b></button>
+                    </div>
+                </div>
+            </div>
+            <div class="prod" id="prod2">
+                <img class="thumbnail" id="thumbnail2" src="https://m.media-amazon.com/images/I/71cnyWVRUKL._AC_UY327_FMwebp_QL65_.jpg" alt="">
+                <div id="details">
+                    <h3>Boult Audio W20 Truly Wireless in Ear Earbuds with 35H Playtime, Zen™ ENC Mic, 45ms Low Latency, 13mm Bass Drivers, Type-C Fast Charging, Made in India</h3>
+                    <p style="font-size: 14px; ">2K+ bought in past month</p>
+                    <div id="offer">Limited Time Deal</div>
+                    <p>₹ <span id="Cost2">899</span></p>
+                    <div id="button">
+                        <button id="minus2" class="minus"><b>-</b></button>
+                        <p id="itemNumber2">0</p>
+                        <button id="add2" class="add"><b>+</b></button>
+                    </div>
+                </div>
+            </div>
+            <div class="prod" id="prod3">
+                <img class="thumbnail" id="thumbnail3" src="https://m.media-amazon.com/images/I/51zLPDG36ML._AC_UL480_FMwebp_QL65_.jpg" alt="">
+                <div id="details">
+                    <h3>pTron Newly Launched Bassbuds Bliss Quad Mic in-Ear TWS Earbuds with TruTalk ENC Calls, 40H Playtime, 50ms,Type-C Fast Charging, India</h3>
+                    <p style="font-size: 14px; ">2.5K+ bought in past month</p>
+                    <div id="offer">Limited Time Deal</div>
+                    <p>₹ <span id="Cost3">999</span></p>
+                    <div id="button">
+                        <button id="minus3" class="minus"><b>-</b></button>
+                        <p id="itemNumber3">0</p>
+                        <button id="add3" class="add"><b>+</b></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="cart">
+            <div class="top">
+                <img src="https://pngimg.com/d/shopping_cart_PNG55.png" alt="">
+                <h1>Cart</h1>
+            </div>
+            <div class="dynamicWindow">
+                <p id="comment" >Your cart is empty</p>
+            </div>
+            <h1 style="margin-left: 10px;">Your Total :₹ <span id="cartTotal">0</span></h1>
+        </div>
+        <script src="./script.js"></script>
+    </div>   
+</body>
+</html>
